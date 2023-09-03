@@ -1,0 +1,273 @@
+@media (max-width: 991px) {
+   .t-container {
+      padding: 0 15px;
+   }
+
+   .t-container:nth-child(odd) .t-container-contecst {
+      grid-template-columns: 1fr;
+   }
+
+   .t-container:nth-child(even) .t-container-contecst {
+      grid-template-columns: 1fr;
+   }
+
+   .t-container:nth-child(even) .t-image {
+      margin: 0 7px;
+      order: 2;
+   }
+
+   .t-image {
+      margin: 0 7px;
+   }
+
+   .t-container:nth-child(even) .t-text {
+      order: 1;
+      margin: 0;
+   }
+
+   .t-text {
+      margin: 0;
+   }
+
+   .first-level {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      margin-bottom: 0;
+   }
+
+   .slides > li > p {
+      height: 200px;
+   }
+
+   .site-hero ul.slides {
+      height: 70%;
+   }
+
+   .agency {
+      display: block;
+      margin-top: -400px;
+      margin-bottom: 100px;
+   }
+
+   .agency img {
+      margin-bottom: 30px;
+   }
+
+   .agency .section-title {
+      margin: 0 auto;
+      text-align: center;
+   }
+
+   .container {
+      margin: 0 auto;
+   }
+
+   .mb-30 {
+      margin-bottom: 30px;
+   }
+
+   .section-title {
+      width: 100%;
+      margin: -50px auto 50px;
+   }
+   .section-title span:after {
+      left: 30px;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+   }
+
+   .section-title-left,
+   .section-title-right {
+      display: block;
+      margin-bottom: 30px;
+   }
+
+   .section-title-left p,
+   .section-title.width-100 span {
+      margin-bottom: 30px;
+   }
+
+   .section-title-text p {
+      margin-bottom: 20px;
+   }
+
+   .section-image {
+      margin: 0;
+   }
+
+   .section-image img {
+      margin-bottom: 30px;
+   }
+
+   .section-title.width-100 {
+      margin: auto;
+   }
+
+   .col2-small {
+      grid-template-columns: repeat(1, 1fr);
+   }
+
+   .grid-col-3 {
+      grid-template-columns: repeat(1, 1fr);
+   }
+
+   .announcements-container-card-btn {
+      position: absolute;
+      margin: 10px 0;
+   }
+
+   .container-card-row {
+      margin-bottom: 40%;
+   }
+
+   .site-hero .big-title {
+      width: auto;
+      height: 80px;
+      font-size: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+      margin: 0 15px;
+      max-width: 400px;
+      position: relative;
+
+      top: 50%;
+      left: calc(50% - 15px);
+      transform: translate(-50%, -50%);
+   }
+
+   .site-hero p {
+      width: 90%;
+   }
+
+   .site-hero-2 .page-title .big-title {
+      font-size: 30px;
+   }
+
+   .services {
+      margin-top: 30px;
+   }
+
+   .col2-big img {
+      height: auto;
+   }
+
+   .post-section {
+      margin: 0 20px;
+   }
+
+   .contact {
+      margin: 0 auto;
+   }
+
+   .contact-container-map {
+      grid-template-columns: repeat(1, 1fr);
+      margin-bottom: 0;
+   }
+
+   .google-map-map {
+      height: 300px;
+   }
+
+   .copyright-bgc > .container {
+      margin: 0;
+   }
+
+   .image-left {
+      float: none;
+      width: auto;
+   }
+
+   .pagination {
+      justify-content: space-around;
+   }
+
+   .pagination a {
+      background-color: #868bc5;
+      font-size: 24px;
+   }
+
+   .pagination a:not(.prev):not(.next) {
+      display: none;
+   }
+
+   #button-up {
+      bottom: 100px;
+      right: 20px;
+   }
+
+   .hero-section {
+      grid-template-columns: none;
+      grid-template-rows: 1fr auto 1fr;
+   }
+
+   .section-hero {
+      flex-direction: column;
+   }
+
+   .hero-section p {
+      order: 1;
+   }
+
+   .contact-container-nrk {
+      flex-direction: column;
+   }
+
+   .contact-container-nrk {
+      border: 0px solid #000;
+      border-radius: 0px;
+      padding: 0px;
+      gap: 0;
+   }
+
+   .nrk-nip,
+   .contact-adress {
+      margin-bottom: 50px;
+   }
+}
+
+@media (min-width: 768px) {
+   .container-odd-even {
+      width: 828px;
+   }
+}
+@media (min-width: 992px) {
+   .container-odd-even {
+      width: 1060px;
+   }
+
+   .nrk-icon {
+      margin: 0 auto;
+   }
+}
+@media (min-width: 1200px) {
+   .container-odd-even {
+      width: 1170px;
+   }
+
+   .nrk-icon {
+      margin: 0 10px;
+   }
+}
+
+@media (orientation: landscape) {
+   nav.mobile-nav {
+      height: 75vh;
+   }
+
+   nav.mobile-nav > ul.first-level li {
+      margin-bottom: 0;
+   }
+
+   nav.mobile-nav > ul.first-level > li a {
+      font-size: 18px;
+      height: 30px;
+   }
+}
