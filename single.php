@@ -2,7 +2,7 @@
 get_header();
 ?>
    <!-- HERO SECTION  -->
-   <div class="site-hero-2 site-hero_3 mb-50" data-aos="fade-up">
+   <div class="site-hero-2 site-hero-3 mb-50" data-aos="fade-up">
       <div class="page-title">
          <div class="big-title post-title montserrat-text uppercase border-bottom">
             <?php the_title(); ?>
