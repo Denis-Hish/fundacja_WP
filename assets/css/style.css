@@ -1776,6 +1776,7 @@ footer.main-footer nav.footer-nav ul li a {
 
 /* POST SECTION */
 .post-section {
+   margin-top: 20px;
    margin-bottom: 100px;
 }
 
@@ -1797,7 +1798,9 @@ footer.main-footer nav.footer-nav ul li a {
 }
 
 .site-hero_3 .page-title {
-   top: 80%;
+   /* top: 80%; */
+   margin-top: 120px;
+   padding: 20px;
 }
 
 /* UP BUTTON */
@@ -2130,4 +2133,10 @@ nav.mobile-nav .first-level {
    transform: translate(-50%, -50%);
    text-align: center;
    margin-bottom: 0;
+}
+
+.animsition,
+.animsition-overlay {
+   position: absolute;
+   width: 100%;
 }

@@ -29,7 +29,7 @@ Template Name: Template "Announcements page"
          <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
                   <a href="<?php the_permalink(); ?>" data-aos="fade-up">
-                     <div class="announcements-container-card" data-aos="fade-up">
+                     <div class="announcements-container-card">
                         <div class="announcements-container-card-image">
                            <?php the_post_thumbnail(); ?>
                         </div>

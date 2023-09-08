@@ -151,6 +151,10 @@
       font-size: 30px;
    }
 
+   .site-hero_3 .page-title {
+      width: 100%;
+   }
+
    .services {
       margin-top: 30px;
    }
@@ -160,7 +164,7 @@
    }
 
    .post-section {
-      margin: 0 20px;
+      margin: 40px 20px 0;
    }
 
    .contact {

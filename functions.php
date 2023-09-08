@@ -191,14 +191,14 @@ function register_navwalker(){
 add_action( 'after_setup_theme', 'register_navwalker' );
 
 // Defaul post image
-function custom_default_post_thumbnail($html, $post_id, $post_thumbnail_id, $size, $attr) {
+function default_post_thumbnail($html, $post_id, $post_thumbnail_id, $size, $attr) {
    if (empty($html)) {
       $default_image = '<img src="' . esc_url(get_template_directory_uri() . '/assets/img/noimage.png') . '" alt="Default image">';
        return $default_image;
    }
    return $html;
 }
-add_filter('post_thumbnail_html', 'custom_default_post_thumbnail', 10, 5);
+add_filter('post_thumbnail_html', 'default_post_thumbnail', 10, 5);
 
 // Active link for post page
 function add_active_class_to_menu_item($classes, $item) {
