@@ -1,6 +1,5 @@
-<?php
-get_header();
-?>
+<?php get_header(); ?>
+
    <!-- HERO SECTION  -->
    <div class="site-hero-2 site-hero-3 mb-50" data-aos="fade-up">
       <div class="page-title">
@@ -20,5 +19,4 @@ get_header();
       </div>
    </div>
 
-<?php
-get_footer();
+<?php get_footer(); ?>

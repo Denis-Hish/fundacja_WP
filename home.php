@@ -36,6 +36,9 @@ Template Name: Template "Announcements page"
                         <div class="announcements-container-card-text">
                            <h4><?php the_title(); ?></h4>
                         </div>
+                        <div class="announcements-container-card-date">
+                           <p><?php echo get_the_date(); ?></p>
+                        </div>
                      </div>
                   </a>
 

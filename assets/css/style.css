@@ -1647,9 +1647,18 @@ footer.main-footer nav.footer-nav ul li a {
    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.announcements-container-card-image,
-.announcements-container-card-text {
+.announcements-container-card-image {
    margin-bottom: 30px;
+}
+
+.announcements-container-card-text {
+}
+
+.announcements-container-card-date {
+   margin: 10px 0 30px;
+   padding: 0 20px;
+   text-align: end;
+   font-style: italic;
 }
 
 .announcements-container-card-text h4 {
@@ -2139,4 +2148,93 @@ nav.mobile-nav .first-level {
 .animsition-overlay {
    position: absolute;
    width: 100%;
+}
+
+.footer {
+}
+
+/* PAGE 404 NOT FOUND */
+body.error404 {
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+}
+
+body.error404 .error-404 {
+   background: url(../img/hero-img.png) no-repeat;
+   background-size: cover;
+   background-position: center;
+   height: 100%;
+   margin-bottom: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+body.error404 .error-404::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   /* height: 100%; */
+   background: rgba(255, 255, 255);
+   background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+   bottom: calc(150px + 80px);
+}
+
+body.error404 .error-404 .page-wrapper {
+   margin-top: 150px;
+   z-index: 1;
+   background-color: rgba(255, 255, 255, 0.8);
+   padding: 60px;
+   border-radius: 10px;
+   box-shadow: 0 5px 20px #838383;
+}
+
+body.error404 .error-404 .page-wrapper ion-icon {
+   display: block;
+   margin: auto;
+   font-size: 56px;
+   color: #5359a3;
+}
+
+body.error404 .error-404 .page-wrapper a {
+   display: block;
+}
+
+body.error404 .error-404 .page-wrapper h2,
+body.error404 .error-404 .page-wrapper p {
+   text-align: center;
+}
+
+body.error404 .error-404 .page-wrapper button {
+   display: block;
+   margin: 20px auto 0;
+   padding: 5px 10px;
+   background-color: var(--color1);
+   border-radius: 5px;
+   border: none;
+   box-shadow: 0 3px 10px #838383;
+   transition: all 0.2s ease-in-out;
+}
+
+body.error404 .error-404 .page-wrapper button:hover {
+   /* background-color: var(--color2); */
+   box-shadow: 0 4px 10px #838383;
+   transform: translateY(-1px);
+}
+
+body.error404 .error-404 .page-wrapper button:active {
+   /* background-color: var(--color2); */
+   box-shadow: 0 0px 10px #838383;
+   transform: translateY(0px);
+}
+
+body.error404 .error-404 .page-wrapper a {
+   color: #fff;
+}
+
+body.error404 .footer .mt-100 {
+   margin-top: 0;
 }
