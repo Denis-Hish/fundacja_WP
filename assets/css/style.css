@@ -424,22 +424,22 @@ nav.desktop-nav {
 nav.desktop-nav li {
    list-style: none;
 }
-nav.desktop-nav ul.first-level > li {
+nav.desktop-nav ul.first-level li {
    float: left;
    margin-right: 20px;
    position: relative;
 }
-nav.desktop-nav ul.first-level > li:last-child {
+nav.desktop-nav ul.first-level li:last-child {
    margin-right: 0;
 }
-nav.desktop-nav ul.first-level > li > a {
+nav.desktop-nav ul.first-level li a {
    display: inline-block;
    line-height: 100px;
    position: relative;
    -webkit-transition: none;
    transition: none;
 }
-nav.desktop-nav ul.first-level > li > a:after {
+nav.desktop-nav ul.first-level li a:after {
    content: '';
    position: absolute;
    top: 50px;
@@ -451,18 +451,18 @@ nav.desktop-nav ul.first-level > li > a:after {
    -webkit-transition: all 0.2s ease-in-out;
    transition: all 0.2s ease-in-out;
 }
-nav.desktop-nav ul.first-level > li:hover > a:after {
+nav.desktop-nav ul.first-level li:hover a:after {
    top: 65px;
    opacity: 1;
 }
-nav.desktop-nav ul.first-level > li a {
+nav.desktop-nav ul.first-level li a {
    text-transform: uppercase;
    font-family: 'Montserrat', sans-serif;
    font-size: 14px;
    font-weight: 700;
 }
 
-nav.desktop-nav ul.first-level > li > ul.second-level {
+nav.desktop-nav ul.first-level li ul.second-level {
    display: none;
    z-index: 999;
    position: absolute;
@@ -471,11 +471,13 @@ nav.desktop-nav ul.first-level > li > ul.second-level {
    min-width: 200px;
    background-color: #60606e;
 }
-nav.desktop-nav ul.first-level > li:last-child > ul.second-level {
+
+nav.desktop-nav ul.first-level li:last-child ul.second-level {
    left: auto;
    right: 0;
 }
-nav.desktop-nav ul.first-level > li > ul.second-level > li > a {
+
+nav.desktop-nav ul.first-level li ul.second-level li a {
    display: inline-block;
    width: 100%;
    height: 40px;
@@ -483,12 +485,15 @@ nav.desktop-nav ul.first-level > li > ul.second-level > li > a {
    padding: 0 20px;
    color: #fff;
 }
-nav.desktop-nav ul.first-level > li > ul.second-level > li:nth-child(even) > a {
+
+nav.desktop-nav ul.first-level li ul.second-level li:nth-child(even) a {
    background-color: #585866;
 }
-nav.desktop-nav ul.first-level > li > ul.second-level > li > a:hover {
+
+nav.desktop-nav ul.first-level li ul.second-level li a:hover {
    background-color: #404051;
 }
+
 @media (max-width: 991px) {
    .menu nav.desktop-nav {
       display: none;
@@ -510,16 +515,16 @@ nav.mobile-nav {
    z-index: 100;
 }
 
-nav.mobile-nav > ul.first-level li {
+nav.mobile-nav ul.first-level li {
    list-style: none;
    margin-bottom: 15px;
 }
 
-nav.mobile-nav > ul.first-level li:last-child {
+nav.mobile-nav ul.first-level li:last-child {
    margin-bottom: 0;
 }
 
-nav.mobile-nav > ul.first-level > li a {
+nav.mobile-nav ul.first-level li a {
    display: inline-block;
    text-decoration: none;
    width: 100%;
@@ -533,13 +538,21 @@ nav.mobile-nav > ul.first-level > li a {
    font-size: 24px;
 }
 
-nav.mobile-nav > ul.first-level > li a:hover {
+nav.mobile-nav ul.first-level li a:hover {
    background-color: #404051;
 }
 
-nav.mobile-nav > ul.first-level > li > ul.second-level {
+nav.mobile-nav ul.first-level li ul.second-level {
    display: none;
    background-color: #50505f;
+}
+
+nav.mobile-nav ul.first-level li.active-link a {
+   color: var(--color2);
+}
+
+nav.mobile-nav ul.first-level .menu {
+   float: inherit;
 }
 
 /*menu icon*/
@@ -806,11 +819,7 @@ footer.main-footer nav.footer-nav ul li a {
    width: 100%;
    height: 100%;
    background: rgba(255, 255, 255);
-   background: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 0) 100%
-   );
+   background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
 }
 .site-hero ul.slides {
    height: 70%;
@@ -874,11 +883,7 @@ footer.main-footer nav.footer-nav ul li a {
    width: 100%;
    height: 100%;
    background: rgba(255, 255, 255);
-   background: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 0) 100%
-   );
+   background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
 }
 .site-hero-2 .page-title {
    position: absolute;
@@ -1727,7 +1732,8 @@ footer.main-footer nav.footer-nav ul li a {
    margin: 0 10px 50px;
 }
 
-.pagination a {
+.pagination a,
+.pagination .page-numbers {
    color: black;
    text-decoration: none;
    transition: background-color 0.3s;
@@ -1743,6 +1749,12 @@ footer.main-footer nav.footer-nav ul li a {
 }
 
 .pagination a.active {
+   background-color: var(--color1);
+   color: white;
+   border: 1px solid var(--color8);
+}
+
+.pagination .page-numbers.current {
    background-color: var(--color1);
    color: white;
    border: 1px solid var(--color8);
@@ -1799,8 +1811,7 @@ footer.main-footer nav.footer-nav ul li a {
    position: fixed;
    bottom: 120px;
    right: 30px;
-   transition: background-color 0.3s, opacity 0.5s, visibility 0.5s,
-      transform 0.2s;
+   transition: background-color 0.3s, opacity 0.5s, visibility 0.5s, transform 0.2s;
    opacity: 0;
    visibility: hidden;
    z-index: 1000;
@@ -1903,7 +1914,7 @@ footer.main-footer nav.footer-nav ul li a {
    gap: 20px;
 }
 
-nav.desktop-nav ul.first-level > .active-link > a:after {
+nav.desktop-nav ul.first-level .active-link a:after {
    content: '';
    position: absolute;
    top: 65px;
@@ -2079,4 +2090,44 @@ header.main-header-fixed {
 
 nav.mobile-nav-fixed {
    transform: translate(-50%, -100px);
+}
+
+/* -------------------------------------------- */
+.post-section-text img {
+   width: auto;
+}
+
+.post-section-text img.alignleft {
+   float: left;
+   margin: 14px 20px 20px 0;
+}
+
+.post-section-text img.alignright {
+   float: right;
+   margin: 14px 0 20px 20px;
+}
+
+.post-section-text img.aligncenter {
+   display: block;
+   margin: 14px auto;
+}
+
+.post-section-text .gallery img {
+   width: auto;
+   vertical-align: inherit;
+}
+
+.post-section-text figure img {
+   width: auto !important;
+   height: auto !important;
+}
+
+nav.mobile-nav .first-level {
+   width: 100%;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   margin-bottom: 0;
 }

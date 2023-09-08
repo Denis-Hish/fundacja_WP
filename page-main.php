@@ -31,7 +31,7 @@ Template Name: Template "Main page"
                uwzględnieniem młodzieży zagrożonej wykluczeniem społecznym</p>
          </div>
          <d1v class="row hero-section-image" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/img000.jpg" alt="image">
+            <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/img/img000.jpg" alt="image">
          </d1v>
          <div class="section-hero section-2" data-aos="fade-up" data-aos-anchor-placement="center-bottom"
             data-aos-delay="500">
@@ -51,7 +51,7 @@ Template Name: Template "Main page"
       <div class="t-container row" data-aos="fade-up">
          <div class="t-container-contecst">
             <div class="t-image">
-               <img src="<?php echo get_template_directory_uri(); ?> /assets/img/img001.jpg" alt="">
+               <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/img/img001.jpg" alt="">
             </div>
             <div class="t-text">
                <div class="t-title">Profilaktyka i wychowanie</div>
@@ -79,7 +79,7 @@ Template Name: Template "Main page"
       <div class="t-container row" data-aos="fade-up">
          <div class="t-container-contecst">
             <div class="t-image">
-               <img src="<?php echo get_template_directory_uri(); ?> /assets/img/img002.jpg" alt="">
+               <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/img/img002.jpg" alt="">
             </div>
             <div class="t-text">
                <div class="t-title">Aktywizacja społeczno-zawodowa</div>
@@ -113,7 +113,7 @@ Template Name: Template "Main page"
       <div class="t-container row" data-aos="fade-up">
          <div class="t-container-contecst">
             <div class="t-image">
-               <img src="<?php echo get_template_directory_uri(); ?> /assets/img/img003.jpg" alt="">
+               <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/img/img003.jpg" alt="">
             </div>
             <div class="t-text">
                <div class="t-title">Usługi dla ludności</div>

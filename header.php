@@ -1,15 +1,3 @@
-<?php
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package fundacja
- */
- ?>
-
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
@@ -20,17 +8,17 @@
    <meta name="description"
       content="Fundacja Nadzieja Rodzinie - Ochrona życia rodzinnego, profilaktyka społeczna, wspieranie osób bezrobotnych ze szczególnym uwzględnieniem młodzieży zagrożonej wykluczeniem społecznym. Poprawa funkcjonowania osób niepełnosprawnych poprzez zatrudnienie, rehabilitację, aktywizację społeczną i kulturalną, pomoc w życiu codziennym. Nasza misja to niesienie pomocy w ochronie życia rodzinnego, profilaktyce społecznej i wspieraniu osób bezrobotnych." />
 
-   <link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?> /assets/img/favicon.png">
+   <link rel="shortcut icon" type="image/png" href="<?php echo get_bloginfo('template_directory'); ?>/assets/img/favicon.png">
 
    <!-- STYLES -->
-   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?> /assets/css/bootstrap.min.css">
-   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?> /assets/css/ionicons.min.css">
-   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?> /assets/css/flexslider.css">
-   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?> /assets/css/animsition.min.css">
+   <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/assets/css/ionicons.min.css">
+   <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/assets/css/flexslider.css">
+   <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/assets/css/animsition.min.css">
    <!-- <link rel="stylesheet" href="assets/css/animate.css"> -->
-   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?> /assets/css/style.css">
-   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?> /assets/css/mobile.css">
-   <script defer src="<?php echo get_template_directory_uri(); ?> /assets/js/script.js"></script>
+   <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/assets/css/style.css">
+   <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/assets/css/mobile.css">
+   <script defer src="<?php echo get_bloginfo('template_directory'); ?>/assets/js/script.js"></script>
 
    <!-- AOS -->
    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -47,34 +35,37 @@
 
    <!-- HEADER  -->
    <header class="main-header">
-      <div class="container">
-         <div class="logo">
-            <a href="index.html">
-               <img class="logo-big" src="<?php echo get_template_directory_uri(); ?> /assets/img/fnr-logo.png" alt="logo">
-               <img class="logo-small" src="<?php echo get_template_directory_uri(); ?> /assets/img/fnr-logo-min.png" alt="logo-min">
+    <div class="container">
+        <div class="logo">
+            <a href="/">
+                <img class="logo-big" src="<?php echo get_template_directory_uri(); ?>/assets/img/fnr-logo.png" alt="logo">
+                <img class="logo-small" src="<?php echo get_template_directory_uri(); ?>/assets/img/fnr-logo-min.png" alt="logo-min">
             </a>
-         </div>
+        </div>
 
-         <div class="menu">
+        <div class="menu">
             <!-- desktop navbar -->
             <nav class="desktop-nav">
-               <ul class="first-level">
-                  <li><a href="index.html" class="animsition-link">Strona główna</a></li>
-                  <li><a href="about.html" class="animsition-link">O nas</a></li>
-                  <li><a href="projects.html" class="animsition-link">Projekty</a></li>
-                  <li><a href="announcements.html" class="animsition-link">Ogłoszenia</a></li>
-                  <li><a href="https://nadziejarodzinie.org.pl/praca/" target="_blank">Praca</a>
-                  </li>
-                  <li><a href="contact.html" class="animsition-link">Kontakt</a></li>
-               </ul>
+                <ul class="first-level">
+                  
+            <?php
+               wp_nav_menu(array(
+                  'theme_location'    => 'header_menu',
+                  'depth'             => 2,
+                  'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                  'walker'            => new WP_Bootstrap_Navwalker(),
+               ));
+            ?>
+
+                </ul>
             </nav>
             <!-- mobile navbar -->
             <nav class="mobile-nav"></nav>
             <div class="menu-icon">
-               <div class="line"></div>
-               <div class="line"></div>
-               <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
             </div>
-         </div>
-      </div>
-   </header>
+        </div>
+    </div>
+</header>

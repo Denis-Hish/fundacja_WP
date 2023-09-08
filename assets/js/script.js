@@ -7,20 +7,20 @@ const currentYear = new Date().getFullYear();
 const yearSpan = document.querySelector('.current-year');
 yearSpan.textContent = currentYear;
 
-// menu close on click elsewhere
-var currentPage = location.pathname.split('/').pop();
-var links = document.querySelectorAll('.first-level a');
+// active link
+// var currentPage = location.pathname.split('/').pop();
+// var links = document.querySelectorAll('.first-level a');
 
-for (var i = 0; i < links.length; i++) {
-   var link = links[i];
-   var href = link.getAttribute('href');
-   var page = href.split('/').pop();
+// for (var i = 0; i < links.length; i++) {
+//    var link = links[i];
+//    var href = link.getAttribute('href');
+//    var page = href.split('/').pop();
 
-   if (page === currentPage) {
-      link.parentNode.classList.add('active-link');
-      break;
-   }
-}
+//    if (page === currentPage) {
+//       link.parentNode.classList.add('active-link');
+//       break;
+//    }
+// }
 
 // положение верхней части экрана
 // const counterElement = document.querySelector('.counter');
@@ -100,3 +100,26 @@ window.addEventListener('scroll', function () {
 // window.addEventListener('resize', truncateOrExpandText);
 
 //----------------------------------------------------------------//
+// document.addEventListener('DOMContentLoaded', function () {
+//    const mainHeader = document.querySelector('.main-header');
+
+//    if (mainHeader.classList.contains('main-header-fixed')) {
+//       mainHeader.style.marginTop = '32px';
+//    } else {
+//       mainHeader.style.marginTop = '0';
+//    }
+// });
+
+// Animation paragraphs
+// function addAosAttributes() {
+//    const postSectionTexts = document.querySelectorAll('.post-section-text');
+//    postSectionTexts.forEach((postSectionText) => {
+//       const paragraphs = postSectionText.querySelectorAll('p');
+
+//       paragraphs.forEach((paragraph) => {
+//          paragraph.setAttribute('data-aos', 'fade-up');
+//          paragraph.classList.add('aos-init', 'aos-animate');
+//       });
+//    });
+// }
+// window.addEventListener('DOMContentLoaded', addAosAttributes);

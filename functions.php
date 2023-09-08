@@ -176,3 +176,35 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/* ------------- DEN CODE ------------- */
+// Register menu
+function register_my_menu()
+{
+    register_nav_menu('header_menu', 'Header menu');
+}
+add_action('init', 'register_my_menu');
+
+// Register Custom Navigation Walker
+function register_navwalker(){
+	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+}
+add_action( 'after_setup_theme', 'register_navwalker' );
+
+// Defaul post image
+function custom_default_post_thumbnail($html, $post_id, $post_thumbnail_id, $size, $attr) {
+   if (empty($html)) {
+      $default_image = '<img src="' . esc_url(get_template_directory_uri() . '/assets/img/noimage.png') . '" alt="Default image">';
+       return $default_image;
+   }
+   return $html;
+}
+add_filter('post_thumbnail_html', 'custom_default_post_thumbnail', 10, 5);
+
+// Active link for post page
+function add_active_class_to_menu_item($classes, $item) {
+   if (is_singular('post') && $item->url === home_url('/announcements/')) {
+       $classes[] = 'active-link';
+   }
+   return $classes;
+}
+add_filter('nav_menu_css_class', 'add_active_class_to_menu_item', 10, 2);
