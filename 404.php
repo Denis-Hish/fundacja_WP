@@ -14,7 +14,7 @@
          </div>
 
          <button>
-            <a href="/">STRONA GŁÓWNA</a>   
+            <a href="<?php echo home_url(); ?>">STRONA GŁÓWNA</a>   
          </button>
          
       </div>

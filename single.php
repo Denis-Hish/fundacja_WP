@@ -15,6 +15,9 @@
             <div class="post-section-text">
                   <?php the_content(); ?>
             </div>
+            <div class="announcements-container-card-date">
+               <p><?php echo get_the_date(); ?></p>
+            </div>
          </div>
       </div>
    </div>
