@@ -79,13 +79,14 @@ Template Name: Template "About page"
                </div>
 
                <div class="section-title-li">
-                  <ul>
+                  <!-- <ul>
                      <li>Andrzej Drapała – Przewodniczący Rady Fundacji</li>
                      <li>Mirosław Barcicki</li>
                      <li>Adam Massalski</li>
                      <li>Wojciech Góźdź</li>
                      <li>Edyta Laurman-Jarząbek</li>
-                  </ul>
+                  </ul> -->
+                  <?php the_field('rada_fundacji'); ?>
                </div>
             </div>
             <div class="col-md-6 mb-100" data-aos="fade-up">
@@ -93,10 +94,11 @@ Template Name: Template "About page"
                   <span>Zarząd Fundacji</span>
                </div>
                <div class="section-title-li">
-                  <ul>
+                  <!-- <ul>
                      <li>Renata Wicha - Prezes Zarządu</li>
                      <li>Andrzej Drapała - Prokurent</li>
-                  </ul>
+                  </ul> -->
+                  <?php the_field('zarząd_fundacji'); ?>
                </div>
             </div>
          </div>

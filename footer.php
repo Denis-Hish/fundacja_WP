@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: Template "Footer"
+*/
+?>
+
 <footer class="footer">
    <section class="services mt-100 no-mb">
          <div class="contact-wrapper">
@@ -12,6 +18,8 @@
                         <div>
                            <div class="contact-title">ZAPRASZAMY DO NAS</div>
                            <div class="contact-subtitle"><nobr>26-020 Chmielnik,</nobr> <nobr>ul. Witosa 4</nobr></div>
+                           <p><?php the_field('acf_adres', 'option'); ?></p>
+                           <p><?php the_field('acf_adres1', 'option'); ?></p>
                         </div>
                      </div>
                   </a>
@@ -130,7 +138,3 @@
 </body>
 
 </html>
-
-
-
-
