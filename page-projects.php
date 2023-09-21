@@ -37,9 +37,6 @@ Template Name: Template "Projects page"
                            <li><a href="<?php echo get_bloginfo('template_directory'); ?>/assets/resource/fnr_projekt.pdf" target="_blank"
                                  rel="noopener noreferrer">"Przeciwdziałanie wykluczeniu
                                  społecznemu młodzieży Klubów Wolna Strefa"</a></li>
-                           <li><a href="<?php echo get_bloginfo('template_directory'); ?>/assets/resource/Projekt.pdf" target="_blank"
-                                 rel="noopener noreferrer">"Rozszerzenie oferty reintegracji Centrum Integracji
-                                 Społecznej w Chmielniku"</a></li>
                            <li><a href="<?php echo get_bloginfo('template_directory'); ?>/assets/resource/plakat_sds.pdf" target="_blank"
                                  rel="noopener noreferrer">"Bezpieczna Przystań – Aktywizacja osób niesamodzielnych i
                                  opieka dzienna w Środowiskowym
@@ -56,19 +53,22 @@ Template Name: Template "Projects page"
                   <div>
                      <div class="row">
                         <ul class="list">
+                        <li><a href="<?php echo get_bloginfo('template_directory'); ?>/assets/resource/Projekt.pdf" target="_blank"
+                                 rel="noopener noreferrer">"Rozszerzenie oferty reintegracji Centrum Integracji
+                                 Społecznej w Chmielniku"</a></li>
                            <li><a href="<?php echo get_bloginfo('template_directory'); ?>/assets/resource/plakat_sds_2022.pdf" target="_blank"
                                  rel="noopener noreferrer">"Bezpieczna Przystań –
                                  Aktywizacja osób niesamodzielnych i opieka dzienna w Środowiskowym
                                  Domu Samopomocy" - 2022</a></li>
-                           <li><a href="http://aktywnaintegracja.fundacja.nadziejarodzinie.org.pl/" style="color: red;" target="_blank" rel="noopener noreferrer">"Aktywna
+                           <li><a href="http://aktywnaintegracja.fundacja.nadziejarodzinie.org.pl/" target="_blank" rel="noopener noreferrer">"Aktywna
                                  integracja
                                  zwiększająca szansę na zatrudnienie wśród uczestników Centrum
                                  Integracji
                                  Społecznej w Chmielniku"</a></li>
-                           <li><a href="http://rozwojkompetencji.fundacja.nadziejarodzinie.org.pl/" style="color: red;" target="_blank" rel="noopener noreferrer">"Rozwój
+                           <li><a href="http://rozwojkompetencji.fundacja.nadziejarodzinie.org.pl/" target="_blank" rel="noopener noreferrer">"Rozwój
                                  kompetencji to Twój
                                  sukces"</a></li>
-                           <li><a href="http://aktywizacja-sds.fundacja.nadziejarodzinie.org.pl/" style="color: red;" target="_blank" rel="noopener noreferrer">"Aktywizacja
+                           <li><a href="http://aktywizacja-sds.fundacja.nadziejarodzinie.org.pl/" target="_blank" rel="noopener noreferrer">"Aktywizacja
                                  osób
                                  niesamodzielnych i opieka dzienna w Dziennym Domu Opieki"</a></li>
                         </ul>
